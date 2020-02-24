@@ -285,15 +285,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"03-MyNavigationView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyNavigationView/Preview Content\"";
 				DEVELOPMENT_TEAM = SL7736T2Z4;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "03-MyNavigationView/Info.plist";
+				INFOPLIST_FILE = MyNavigationView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.objc.-3-MyNavigationView";
+				PRODUCT_BUNDLE_IDENTIFIER = io.objc.MyNavigationView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,15 +305,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"03-MyNavigationView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyNavigationView/Preview Content\"";
 				DEVELOPMENT_TEAM = SL7736T2Z4;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "03-MyNavigationView/Info.plist";
+				INFOPLIST_FILE = MyNavigationView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.objc.-3-MyNavigationView";
+				PRODUCT_BUNDLE_IDENTIFIER = io.objc.MyNavigationView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

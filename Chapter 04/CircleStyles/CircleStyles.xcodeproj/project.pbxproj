@@ -24,8 +24,6 @@
 		8309BA8823CDDEE5003B5DC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8309BA8B23CDDEE5003B5DC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8309BA8D23CDDEE6003B5DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8309BA9623CDDEE6003B5DC7 /* CircleStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStylesTests.swift; sourceTree = "<group>"; };
-		8309BA9823CDDEE6003B5DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				8309BA7E23CDDEE4003B5DC7 /* CircleStyles */,
-				8309BA9523CDDEE6003B5DC7 /* CircleStylesTests */,
 				8309BA7D23CDDEE4003B5DC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,15 +73,6 @@
 				8309BA8823CDDEE5003B5DC7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		8309BA9523CDDEE6003B5DC7 /* CircleStylesTests */ = {
-			isa = PBXGroup;
-			children = (
-				8309BA9623CDDEE6003B5DC7 /* CircleStylesTests.swift */,
-				8309BA9823CDDEE6003B5DC7 /* Info.plist */,
-			);
-			path = CircleStylesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
