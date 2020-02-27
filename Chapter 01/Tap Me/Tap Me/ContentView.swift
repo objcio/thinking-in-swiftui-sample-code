@@ -14,10 +14,10 @@ struct ContentView: View {
         VStack(spacing: 10) {
             Button(action: { self.counter += 1 }, label: {
                 Text("Tap me!")
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.primary)
             })
             .padding()
-            .background(Color.black)
+            .background(Color.secondary)
             .cornerRadius(5)
             
             if counter > 0 {
