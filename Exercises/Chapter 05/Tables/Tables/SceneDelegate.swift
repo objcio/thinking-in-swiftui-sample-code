@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  01 Tap Me
+//  Tables
 //
-//  Created by Florian Kugler on 31-01-2020.
+//  Created by Chris Eidhof on 28.01.20.
 //  Copyright © 2020 objc.io. All rights reserved.
 //
 
@@ -38,27 +38,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
     }
 
-        func snapshot() {
-            let view = self.window!.rootViewController!.view!
-            var rect = view.subviews[0].frame
-            for sub in view.subviews.dropFirst() {
-                rect = rect.union(sub.frame)
-            }
-            rect = rect.insetBy(dx: -10, dy: -10)
-            let renderer = UIGraphicsImageRenderer(size: rect.size)
-            let data = renderer.pngData { context in
-                context.cgContext.setFillColor(UIColor.white.cgColor)
-                context.fill(view.bounds)
-                context.cgContext.translateBy(x: -rect.origin.x, y: -rect.origin.y)
-                view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
-            }
-            try! data.write(to: URL(fileURLWithPath: "/Users/florian/Desktop/01.png"))
-        }
-
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        snapshot()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

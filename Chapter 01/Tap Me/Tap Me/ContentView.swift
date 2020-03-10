@@ -9,16 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var counter = 0
+    @State var counter = 3
     var body: some View {
-        VStack(spacing: 10) {
+        VStack {
             Button(action: { self.counter += 1 }, label: {
                 Text("Tap me!")
-                    .foregroundColor(Color.primary)
+                    .padding()
+                    .background(Color(.tertiarySystemFill))
+                    .cornerRadius(5)
             })
-            .padding()
-            .background(Color.secondary)
-            .cornerRadius(5)
             
             if counter > 0 {
                 Text("You've tapped \(counter) times")
