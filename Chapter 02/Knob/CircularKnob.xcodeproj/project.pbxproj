@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83C604172371680B007AA2BF /* Knob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knob.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C604172371680B007AA2BF /* CircularKnob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularKnob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C6041A2371680B007AA2BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83C6041C2371680B007AA2BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		83C6041E2371680B007AA2BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		83C604182371680B007AA2BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83C604172371680B007AA2BF /* Knob.app */,
+				83C604172371680B007AA2BF /* CircularKnob.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83C604162371680B007AA2BF /* Knob */ = {
+		83C604162371680B007AA2BF /* CircularKnob */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83C604412371680B007AA2BF /* Build configuration list for PBXNativeTarget "Knob" */;
+			buildConfigurationList = 83C604412371680B007AA2BF /* Build configuration list for PBXNativeTarget "CircularKnob" */;
 			buildPhases = (
 				83C604132371680B007AA2BF /* Sources */,
 				83C604142371680B007AA2BF /* Frameworks */,
@@ -90,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = Knob;
+			name = CircularKnob;
 			productName = Knob;
-			productReference = 83C604172371680B007AA2BF /* Knob.app */;
+			productReference = 83C604172371680B007AA2BF /* CircularKnob.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83C604122371680B007AA2BF /* Build configuration list for PBXProject "Knob" */;
+			buildConfigurationList = 83C604122371680B007AA2BF /* Build configuration list for PBXProject "CircularKnob" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83C604162371680B007AA2BF /* Knob */,
+				83C604162371680B007AA2BF /* CircularKnob */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83C604122371680B007AA2BF /* Build configuration list for PBXProject "Knob" */ = {
+		83C604122371680B007AA2BF /* Build configuration list for PBXProject "CircularKnob" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83C6043F2371680B007AA2BF /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83C604412371680B007AA2BF /* Build configuration list for PBXNativeTarget "Knob" */ = {
+		83C604412371680B007AA2BF /* Build configuration list for PBXNativeTarget "CircularKnob" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83C604422371680B007AA2BF /* Debug */,
