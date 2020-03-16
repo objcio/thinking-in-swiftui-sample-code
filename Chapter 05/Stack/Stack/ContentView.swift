@@ -1,11 +1,3 @@
-//
-//  ContentView.swift
-//  SideBarLayout
-//
-//  Created by Chris Eidhof on 23.01.20.
-//  Copyright © 2020 Chris Eidhof. All rights reserved.
-//
-
 import SwiftUI
 
 struct CollectSizePreference: PreferenceKey {

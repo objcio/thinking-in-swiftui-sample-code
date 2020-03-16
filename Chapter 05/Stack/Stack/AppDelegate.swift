@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Collapsable
+//  Stack
 //
-//  Created by Chris Eidhof on 23.01.20.
-//  Copyright © 2020 Chris Eidhof. All rights reserved.
+//  Created by Chris Eidhof on 16.03.20.
+//  Copyright © 2020 objc.io. All rights reserved.
 //
 
 import UIKit
