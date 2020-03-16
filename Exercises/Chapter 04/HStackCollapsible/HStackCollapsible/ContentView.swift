@@ -31,7 +31,7 @@ struct Collapsible<Element, Content: View>: View {
 }
 
 struct ContentView: View {
-    let colors: [(Color, CGFloat)] = [(.red, 50), (.green, 30), (.blue, 75)]
+    let colors: [(Color, CGFloat)] = [(.init(white: 0.3), 50), (.init(white: 0.8), 30), (.init(white: 0.5), 75)]
     @State var expanded: Bool = true
     var body: some View {
         VStack {
