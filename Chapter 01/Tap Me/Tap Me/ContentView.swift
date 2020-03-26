@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var counter = 3
+    @State var counter = 0
     var body: some View {
         VStack {
             Button(action: { self.counter += 1 }, label: {
