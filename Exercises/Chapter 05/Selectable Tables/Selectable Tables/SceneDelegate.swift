@@ -39,24 +39,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-//     	snapshot()
-    }
-    
-    func snapshot() {
-        let view = self.window!.rootViewController!.view!
-        var rect = view.subviews[0].frame
-        for sub in view.subviews.dropFirst() {
-            rect = rect.union(sub.frame)
-        }
-        rect = rect.insetBy(dx: -10, dy: -10)
-        let renderer = UIGraphicsImageRenderer(size: rect.size)
-        let data = renderer.pngData { context in
-            context.cgContext.setFillColor(UIColor.white.cgColor)
-            context.fill(view.bounds)
-            context.cgContext.translateBy(x: -rect.origin.x, y: -rect.origin.y)
-            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
-        }
-        try! data.write(to: URL(fileURLWithPath: "/Users/chris/Desktop/01.png"))
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
