@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Chapter 1">
+      <FileRef
+         location = "group:Chapter 01/Tap Me/Tap Me.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Chapter 2">
+      <FileRef
+         location = "group:Chapter 02/Knob/CircularKnob.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Chapter 02/SimpleClock/SimpleClock.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Chapter 3">
+      <FileRef
+         location = "group:Chapter 03/Knob/Knob.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Chapter 03/MyNavigationView/MyNavigationView.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Chapter 4">
+      <FileRef
+         location = "group:Chapter 04/CircleStyles/CircleStyles.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Chapter 5">
+      <FileRef
+         location = "group:Chapter 05/TabView/TabView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Chapter 05/Stack/Stack.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Chapter 6">
+      <FileRef
+         location = "group:Chapter 06/Transition/Transition.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Chapter 06/ShakeAnimation/ShakeAnimation.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Exercises">
+      <Group
+         location = "container:"
+         name = "Chapter 2">
+         <FileRef
+            location = "group:Exercises/Chapter 02/ImageLoading/ImageLoading.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Chapter 3">
+         <FileRef
+            location = "group:Exercises/Chapter 03/Knob Color/Knob Color.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Chapter 4">
+         <FileRef
+            location = "group:Exercises/Chapter 04/HStackCollapsible/HStackCollapsible.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Exercises/Chapter 04/Badges/Badges.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Chapter 5">
+         <FileRef
+            location = "group:Exercises/Chapter 05/Tables/Tables.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Exercises/Chapter 05/Selectable Tables/Selectable Tables.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Chapter 6">
+         <FileRef
+            location = "group:Exercises/Chapter 06/GraphAnimations/GraphAnimations.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Exercises/Chapter 06/Bounce Animation/Bounce Animation.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
