@@ -24,12 +24,10 @@ struct KnobShape: Shape {
 
 struct Knob: View {
     @Binding var value: Double // should be between 0 and 1
-    @Environment(\.colorScheme) var colorScheme
-    
 
     var body: some View {
          KnobShape()
-            .fill(colorScheme == .dark ? Color.white : Color.black)
+            .fill(Color.primary)
             .rotationEffect(Angle(degrees: value * 330))
             .onTapGesture {
                 withAnimation(.default) {
@@ -55,11 +53,11 @@ struct ContentView: View {
                 Text("Knob Size")
                 Slider(value: $knobSize, in: 0...0.4)
             }
-            Button(action: {
+            Button("Toggle", action: {
                 withAnimation(.default) {
                     self.value = self.value == 0 ? 1 : 0
                 }
-            }, label: { Text("Toggle")})
+            })
         }
     }
 }
