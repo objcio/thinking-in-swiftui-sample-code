@@ -38,27 +38,25 @@ final class Remote<A>: ObservableObject {
 struct Photo: Codable, Identifiable {
     var id: String
     var author: String
-    var width, height: Int
+    var width, height: CGFloat
     var url, download_url: URL
 }
 
 struct ContentView: View {
-    @ObservedObject var items = Remote(
+    @StateObject var items = Remote(
         url: URL(string: "https://picsum.photos/v2/list")!,
         transform: { try? JSONDecoder().decode([Photo].self, from: $0) }
     )
     
     var body: some View {
-        return NavigationView {
-            if items.value == nil {
-                Text("Loading...")
-                    .onAppear { self.items.load() }
-            } else {
-                List {
-                    ForEach(items.value!) { photo in
-                        NavigationLink(destination: PhotoView(photo.download_url), label: { Text(photo.author) })
-                    }
+        NavigationView {
+            if let photos = items.value {
+                List(photos) { photo in
+                    NavigationLink(photo.author, destination: PhotoView(photo.download_url, aspectRatio: photo.width/photo.height))
                 }
+            } else {
+                ProgressView()
+                    .onAppear { items.load() }
             }
         }
     }
@@ -66,20 +64,23 @@ struct ContentView: View {
 
 struct PhotoView: View {
     @ObservedObject var image: Remote<UIImage>
-
-    init(_ url: URL) {
+    var aspectRatio: CGFloat
+    
+    init(_ url: URL, aspectRatio: CGFloat) {
         image = Remote(url: url, transform: { UIImage(data: $0) })
+        self.aspectRatio = aspectRatio
+    }
+    
+    var imageOrPlaceholder: Image {
+        image.value.map(Image.init) ?? Image(systemName: "photo")
     }
 
     var body: some View {
-        return Group {
-            if image.value == nil {
-                Text("Loading...").onAppear { self.image.load() }
-            } else {
-                Image(uiImage: image.value!)
-                	.resizable()
-                    .aspectRatio(image.value!.size, contentMode: .fit)
-            }
-        }
+        imageOrPlaceholder
+            .resizable()
+            .foregroundColor(.secondary)
+            .aspectRatio(aspectRatio, contentMode: .fit)
+            .padding()
+            .onAppear { image.load() }
     }
 }
