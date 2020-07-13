@@ -44,11 +44,10 @@ struct Knob: View {
     var pointerSize: CGFloat? = nil
     @Environment(\.knobPointerSize) var envPointerSize
     @Environment(\.colorScheme) var colorScheme
-    
 
     var body: some View {
          KnobShape(pointerSize: pointerSize ?? envPointerSize)
-            .fill(colorScheme == .dark ? Color.white : Color.black)
+            .fill(colorScheme == .dark ? Color.white : .black)
             .rotationEffect(Angle(degrees: value * 330))
             .onTapGesture {
                 withAnimation(.default) {
@@ -75,11 +74,11 @@ struct ContentView: View {
                 Text("Knob Size")
                 Slider(value: $knobSize, in: 0...0.4)
             }
-            Button(action: {
+            Button("Toggle", action: {
                 withAnimation(.default) {
-                    self.value = self.value == 0 ? 1 : 0
+                    value = value == 0 ? 1 : 0
                 }
-            }, label: { Text("Toggle")})
+            })
         }
     }
 }
