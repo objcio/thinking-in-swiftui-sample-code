@@ -38,11 +38,13 @@ struct ContentView: View {
             }            
         }.padding(10).overlayPreferenceValue(BoundsKey.self, { anchor in
             GeometryReader { proxy in
-                Rectangle()
-                    .fill(Color.accentColor)
-                    .frame(width: proxy[anchor!].width, height: 2)
-                    .offset(x: proxy[anchor!].minX)
-                    .frame(width: proxy.size.width, height: proxy.size.height, alignment: .bottomLeading)
+                if let a = anchor {
+                    Rectangle()
+                        .fill(Color.accentColor)
+                        .frame(width: proxy[a].width, height: 2)
+                        .offset(x: proxy[a].minX)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                }
             }
         })
     }
