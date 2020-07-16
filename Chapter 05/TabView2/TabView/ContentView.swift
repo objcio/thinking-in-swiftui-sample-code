@@ -34,7 +34,7 @@ struct ContentView: View {
             Rectangle()
                 .fill(Color.accentColor)
                 .frame(height: 2)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                .frame(maxHeight: .infinity, alignment: .bottom)
                 .matchedGeometryEffect(id: selectedTabIndex, in: ns, isSource: false)
         )
     }
