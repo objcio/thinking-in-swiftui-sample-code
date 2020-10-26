@@ -33,8 +33,7 @@ struct ContentView: View {
         .overlay(
             Rectangle()
                 .fill(Color.accentColor)
-                .frame(height: 2)
-                .frame(maxHeight: .infinity, alignment: .bottom)
+                .frame(height: 2, alignment: .bottom)
                 .matchedGeometryEffect(id: selectedTabIndex, in: ns, isSource: false)
         )
     }
