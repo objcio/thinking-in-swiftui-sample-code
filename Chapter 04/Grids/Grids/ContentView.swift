@@ -1,26 +1,17 @@
 //
 //  ContentView.swift
-//  deleteme2
+//  Grids
 //
 //  Created by Florian Kugler on 16-11-2020.
 //
 
 import SwiftUI
 
-extension View {
-    var measured: some View {
-        overlay(GeometryReader { p in
-            Text("\(p.size.width, specifier: "%.2f")")
-                .font(.caption)
-                .background(Color.white)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        })
-    }
-}
+let blue = Color(red: 0, green: 146/255.0, blue: 219/255.0)
 
 struct ContentView: View {
     func items(_ count: Int) -> [Color] {
-        (0..<count).map { Color(hue: Double($0)/Double(count), saturation: 0.8, brightness: 1) }
+        Array(repeating: blue, count: count)
     }
 
     var body: some View {
@@ -32,6 +23,8 @@ struct ContentView: View {
                 }
             }
             .frame(width: 400)
+            .border(Color.black)
+            .measuredBelow
 
             let items2 = items(4)
             LazyVGrid(columns: [
@@ -44,6 +37,7 @@ struct ContentView: View {
             }
             .frame(width: 300)
             .border(Color.black)
+            .measuredBelow
 
             let items3 = items(10)
             LazyVGrid(columns: [
@@ -57,9 +51,61 @@ struct ContentView: View {
             }
             .frame(width: 300)
             .border(Color.black)
+            .measuredBelow
         }
     }
 }
+
+extension View {
+    func measured(_ color: Color) -> some View {
+        overlay(GeometryReader { p in
+            HStack(spacing: 2) {
+                Arrow()
+                Text("\(p.size.width, specifier: "%.0f")")
+                    .font(.system(size: 14)).bold()
+                    .foregroundColor(color)
+                    .fixedSize()
+                    .frame(maxHeight: .infinity)
+                Arrow()
+                    .scaleEffect(-1, anchor: .center)
+            }
+        })
+    }
+    
+    var measured: some View {
+        measured(.white)
+    }
+    
+    var measuredBelow: some View {
+        self
+            .padding(.bottom, 25)
+            .overlay(Color.clear.frame(height: 25).measured(.black), alignment: .bottom)
+    }
+}
+
+struct ArrowShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        Path { p in
+            let x = rect.minX + 2
+            let size: CGFloat = 5
+            p.move(to: CGPoint(x: x, y: rect.midY))
+            p.addLine(to: CGPoint(x: x + size, y: rect.midY - size))
+            p.move(to: CGPoint(x: x, y: rect.midY))
+            p.addLine(to: CGPoint(x: x + size, y: rect.midY + size))
+            p.move(to: CGPoint(x: x, y: rect.midY))
+            p.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
+        }
+    }
+}
+
+struct Arrow: View {
+    var body: some View {
+        ArrowShape()
+            .stroke(lineWidth: 1)
+            .foregroundColor(Color(red: 9/255.0, green: 73/255.0, blue: 109/255.0))
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
