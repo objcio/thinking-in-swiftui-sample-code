@@ -7,30 +7,33 @@
 
 import SwiftUI
 
+let blue = Color(red: 0, green: 146/255.0, blue: 219/255.0)
+
 struct ContentView: View {
     @Namespace var ns
     @State var state = false
     
     var body: some View {
         VStack {
-            if !state {
-                Rectangle()
-                    .fill(Color.red)
-                    .matchedGeometryEffect(id: "1", in: ns)
-                    .frame(width: 200, height: 200)
-                    .offset(x: -100, y: 0)
-            } else {
-                Circle()
-                    .fill(Color.green)
-                    .matchedGeometryEffect(id: "1", in: ns)
-                    .frame(width: 100, height: 100)
-                    .offset(x: 100, y: 0)
+            HStack {
+                if !state {
+                    Rectangle().fill(blue)
+                        .matchedGeometryEffect(id: "1", in: ns)
+                        .frame(width: 200, height: 200)
+                }
+                Spacer()
+                if state {
+                    Circle().fill(blue)
+                        .matchedGeometryEffect(id: "1", in: ns)
+                        .frame(width: 100, height: 100)
+                }
             }
-            Spacer()
+            .border(Color.black)
+            .frame(width: 300, height: 200)
             Toggle("", isOn: $state)
         }
         .animation(.default)
-        .frame(width: 0, height: 300)
+        .frame(width: 0)
     }
 }
 
