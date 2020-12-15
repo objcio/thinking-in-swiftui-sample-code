@@ -39,14 +39,6 @@ struct SelectionPreference: PreferenceKey {
     }
 }
 
-func ifLet<Value, Content: View>(_ value: Value?, content: (Value) -> Content) -> some View {
-    Group {
-        if value != nil {
-            content(value!)
-        }
-    }
-}
-
 struct Table<Cell: View>: View {
     var cells: [[Cell]]
     let padding: CGFloat = 5
@@ -97,7 +89,7 @@ struct SelectionRectangle: View {
     let anchor: Anchor<CGRect>?
     var body: some View {
         GeometryReader { proxy in
-            ifLet(self.anchor.map { proxy[$0] }) { rect in
+            if let rect = self.anchor.map({ proxy[$0] }) {
                 Rectangle()
                     .fill(Color.clear)
                     .border(Color.blue, width: 2)
